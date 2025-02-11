@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 export const sneakers = [
   {
     id: uuidv4(),
-    image: "/cross.jpg",
+    image: "cross.jpg",
     name: "Мужские Кроссовки Nike Blazer Mid Suede",
     price: 10200,
     currency: "KGS",
@@ -12,7 +12,7 @@ export const sneakers = [
   },
   {
     id: uuidv4(),
-    image: "/cross2.jpg",
+    image: "cross2.jpg",
     name: "Мужские Кроссовки Nike Air Max 270",
     price: 8150,
     currency: "KGS",
@@ -21,7 +21,7 @@ export const sneakers = [
   },
   {
     id: uuidv4(),
-    image: "/cross.jpg",
+    image: "cross.jpg",
     name: "Мужские Кроссовки Nike Blazer Mid Suede",
     price: 10200,
     currency: "KGS",
@@ -30,7 +30,7 @@ export const sneakers = [
   },
   {
     id: uuidv4(),
-    image: "/cross2.jpg",
+    image: "cross2.jpg",
     name: "Мужские Кроссовки Nike Air Max 270",
     price: 8150,
     currency: "KGS",
@@ -39,7 +39,7 @@ export const sneakers = [
   },
   {
     id: uuidv4(),
-    image: "/cross.jpg",
+    image: "cross.jpg",
     name: "Мужские Кроссовки Nike Blazer Mid Suede",
     price: 10200,
     currency: "KGS",
@@ -48,7 +48,7 @@ export const sneakers = [
   },
   {
     id: uuidv4(),
-    image: "/cross2.jpg",
+    image: "cross2.jpg",
     name: "Мужские Кроссовки Nike Air Max 270",
     price: 8150,
     currency: "KGS",
@@ -57,7 +57,7 @@ export const sneakers = [
   },
   {
     id: uuidv4(),
-    image: "/cross.jpg",
+    image: "cross.jpg",
     name: "Мужские Кроссовки Nike Blazer Mid Suede",
     price: 10200,
     currency: "KGS",
@@ -66,7 +66,7 @@ export const sneakers = [
   },
   {
     id: uuidv4(),
-    image: "/cross2.jpg",
+    image: "cross2.jpg",
     name: "Мужские Кроссовки Nike Air Max 270",
     price: 8150,
     currency: "KGS",
@@ -75,7 +75,7 @@ export const sneakers = [
   },
   {
     id: uuidv4(),
-    image: "/cross.jpg",
+    image: "cross.jpg",
     name: "Мужские Кроссовки Nike Blazer Mid Suede",
     price: 10200,
     currency: "KGS",
@@ -84,7 +84,7 @@ export const sneakers = [
   },
   {
     id: uuidv4(),
-    image: "/cross2.jpg",
+    image: "cross2.jpg",
     name: "Мужские Кроссовки Nike Air Max 270",
     price: 8150,
     currency: "KGS",
@@ -93,7 +93,7 @@ export const sneakers = [
   },
   {
     id: uuidv4(),
-    image: "/cross.jpg",
+    image: "cross.jpg",
     name: "Мужские Кроссовки Nike Blazer Mid Suede",
     price: 10200,
     currency: "KGS",
@@ -102,7 +102,7 @@ export const sneakers = [
   },
   {
     id: uuidv4(),
-    image: "/cross2.jpg",
+    image: "cross2.jpg",
     name: "Мужские Кроссовки Nike Air Max 270",
     price: 8150,
     currency: "KGS",

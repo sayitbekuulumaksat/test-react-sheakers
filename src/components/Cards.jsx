@@ -5,21 +5,25 @@ import { sneakers } from "../data/sneakers";
 import { useDispatch, useSelector } from "react-redux";
 
 import { useEffect } from "react";
-import { setSneakers, toggleBasket, toggleFavorite } from "../redux/slices/sneakersSlice";
+import {
+  setSneakers,
+  toggleBasket,
+  toggleFavorite,
+} from "../redux/slices/sneakersSlice";
 
 function Cards() {
   const sneakersData = useSelector((state) => state.sneakers.sneakers);
   const dispatch = useDispatch();
 
   const handleToggleBasket = (card) => {
-    dispatch(toggleBasket(card.id))
+    dispatch(toggleBasket(card.id));
   };
-  const handleToggleIsFavorite =(card)=>{
-    dispatch(toggleFavorite(card.id))
-  }
-    useEffect(() => {
-        dispatch(setSneakers(sneakers));
-    }, [dispatch]);
+  const handleToggleIsFavorite = (card) => {
+    dispatch(toggleFavorite(card.id));
+  };
+  useEffect(() => {
+    dispatch(setSneakers(sneakers));
+  }, [dispatch]);
 
   return (
     <>
@@ -32,7 +36,7 @@ function Cards() {
             КУПИТЬ
           </button>
         </div>
-        <img src='/image-banner.png' alt='banner' />
+        <img src='image-banner.png' alt='banner' />
         <MdKeyboardArrowRight className='bg-white w-10 h-10 rounded-full -mr-5 cursor-pointer hover:h-20' />
       </div>
       <div className='flex items-center justify-between mt-5 '>
@@ -53,7 +57,10 @@ function Cards() {
             key={i}
             className='border-1 rounded-4xl p-5 border-gray-300 text-left relative'
           >
-            <div onClick={()=> handleToggleIsFavorite(card)} className='p-2 border-1 border-gray-400 absolute top-2 right-2 rounded-full cursor-pointer'>
+            <div
+              onClick={() => handleToggleIsFavorite(card)}
+              className='p-2 border-1 border-gray-400 absolute top-2 right-2 rounded-full cursor-pointer'
+            >
               {card.isFavorite ? (
                 <FaHeart className='text-red-500' />
               ) : (

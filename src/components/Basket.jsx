@@ -12,7 +12,7 @@ function Basket() {
   };
   const basket = sneakers.filter((card) => card.toBasket === true);
   const totalPrice = basket.reduce((sum, card) => sum + card.price, 0);
-const tax = (totalPrice * 0.05).toFixed(2); 
+  const tax = (totalPrice * 0.05).toFixed(2);
 
   return (
     <div className='text-left   mt-10'>
@@ -55,7 +55,7 @@ const tax = (totalPrice * 0.05).toFixed(2);
         </div>
       ) : (
         <div className='text-center mt-10'>
-          <img src='/basketEmpty.svg' className='m-auto' />
+          <img src='basketEmpty.svg' className='m-auto' />
           <h3 className='font-semibold text-2xl mt-10'> Корзина пустая</h3>
           <p className='text-gray-300'>
             Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.

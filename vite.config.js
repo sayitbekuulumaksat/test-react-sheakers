@@ -4,6 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/test-react-sheakers/",
   plugins: [react(), tailwindcss()],
-  base: "/test-react-sneakers/",
 });

@@ -61,7 +61,7 @@ function Bookmarks() {
         </div>
       ) : (
         <div className='col-span-5 text-center mt-10'>
-          <img src='/emptyBookmark.svg' className='m-auto' />
+          <img src='emptyBookmark.svg' className='m-auto' />
           <h3 className='font-semibold text-2xl mt-10'> Закладок нет :(</h3>
           <p className='text-gray-300'>Вы ничего не добавляли в закладки </p>
           <a
