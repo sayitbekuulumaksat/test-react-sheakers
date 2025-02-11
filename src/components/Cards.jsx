@@ -10,21 +10,25 @@ import {
   toggleBasket,
   toggleFavorite,
 } from "../redux/slices/sneakersSlice";
+import { useState } from "react";
 
 function Cards() {
-  const sneakersData = useSelector((state) => state.sneakers.sneakers);
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(setSneakers(sneakers));
+  }, [dispatch]);
+  const [nameFilter, setNameFilter] = useState("")
 
+  const sneakersData = useSelector((state) => state.sneakers.sneakers);
+  
+  const filterSneakers = sneakersData.filter((card) => card.name.toLowerCase().includes(nameFilter.toLowerCase())
+  );
   const handleToggleBasket = (card) => {
     dispatch(toggleBasket(card.id));
   };
   const handleToggleIsFavorite = (card) => {
     dispatch(toggleFavorite(card.id));
   };
-  useEffect(() => {
-    dispatch(setSneakers(sneakers));
-  }, [dispatch]);
-
   return (
     <>
       <div className='bg-[#F4EFE9] flex items-center justify-between mt-10 rounded-3xl'>
@@ -46,13 +50,15 @@ function Cards() {
           <FaSearch className='text-gray-400' />{" "}
           <input
             type='text'
+            value={nameFilter}
+            onChange={(e)=> setNameFilter(e.target.value)}
             className='bg-none p-2 w-full'
             placeholder='Поиск...'
           />{" "}
         </div>
       </div>
       <div className='grid grid-cols-4 gap-10 mt-10'>
-        {sneakersData.map((card, i) => (
+        {filterSneakers.map((card, i) => (
           <div
             key={i}
             className='border-1 rounded-4xl p-5 border-gray-300 text-left relative'
@@ -75,7 +81,7 @@ function Cards() {
               {card.toBasket ? <FaCheck className='text-white' /> : <FaPlus />}
             </div>
 
-            <img src={card.image} />
+            <img className="w-full" src={card.image} />
             <h4 className='font-semibold'>{card.name}</h4>
             <p className='text-gray-400'>
               ЦЕНА:{" "}
